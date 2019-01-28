@@ -1,0 +1,45 @@
+[parity]
+base_path = "./chain-data"
+chain = "genesis.json"
+no_persistent_txqueue = true
+keys_path = "./keys"
+
+[rpc]
+disable = false
+apis = ["web3", "eth", "parity", "personal", "net", "traces", "rpc"]
+interface = "0.0.0.0"
+cors=["all"]
+
+[websockets]
+disable = false
+apis = ["web3", "eth", "parity", "personal", "net", "traces", "rpc", "pubsub"]
+interface = "0.0.0.0"
+
+[ipc]
+disable = false
+apis = ["web3", "eth", "parity", "personal", "net", "traces", "rpc"]
+path = "/tmp/parity.ipc"
+
+[account]
+unlock = ["2ab9f5132bf6b0718542955c88efa47b4139605f", "9411816ffd9f1ca99712a976c8d87605e2cc27b1", "254fccb0603859f096be3151b10ec4337b4fec57"]
+password = ["keys/all.pwd"]
+
+[ui]
+disable = false
+
+[network]
+discovery = false
+
+[mining]
+engine_signer = "0xa5aa6d3dce7e88059adedee8c32b8f80e54cd404"
+force_sealing = true
+reseal_on_txs = "none"
+min_gas_price = 1000000000
+gas_floor_target = "7700000"
+
+[footprint]
+fat_db = "on"
+
+[misc]
+# Logging pattern (`<module>=<level>`, e.g. `own_tx=trace`).
+logging = "own_tx,tx_queue,rpc=trace"

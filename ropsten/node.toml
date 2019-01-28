@@ -1,0 +1,42 @@
+[parity]
+mode = "last"
+base_path = "./chain-data"
+no_persistent_txqueue = true
+keys_path = "./keys"
+chain = "ropsten"
+light = false
+
+[rpc]
+disable = false
+apis = ["all"]
+interface = "0.0.0.0"
+cors=["all"]
+
+[websockets]
+disable = false
+apis = ["all"]
+interface = "0.0.0.0"
+
+[ipc]
+disable = true
+
+
+[ui]
+disable = false
+
+[account]
+unlock = ["0x1e0aba9f970e6515781862dd6a26a3d726523270"]
+password = ["./pwd"]
+
+[network]
+discovery = false
+warp = true
+
+
+[footprint]
+#fat_db = "on"
+
+[misc]
+log_file = "./parity.log"
+# Logging pattern (`<module>=<level>`, e.g. `own_tx=trace`).
+logging = "own_tx,tx_queue,rpc=trace"

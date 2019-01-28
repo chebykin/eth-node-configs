@@ -1,0 +1,28 @@
+[parity]
+base_path = "./chain-data"
+chain = "./genesis.json"
+no_persistent_txqueue = true
+keys_path = "./keys"
+
+[rpc]
+disable = false
+apis = ["web3", "eth", "parity", "personal", "net", "traces", "rpc"]
+interface = "0.0.0.0"
+cors=["all"]
+processing_threads = 4
+
+[websockets]
+disable = false
+apis = ["web3", "eth", "parity", "personal", "net", "traces", "rpc", "pubsub"]
+interface = "0.0.0.0"
+
+[account]
+unlock = ["2ab9f5132bf6b0718542955c88efa47b4139605f", "9411816ffd9f1ca99712a976c8d87605e2cc27b1", "254fccb0603859f096be3151b10ec4337b4fec57"]
+password = ["keys/all.pwd"]
+
+[mining]
+reseal_min_period = 0
+min_gas_price = 0
+
+[misc]
+logging = "miner,own_tx,rpc,txqueue,signer=trace"
